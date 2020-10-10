@@ -15,6 +15,22 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
   color: #333;
+  overflow-x: hidden;
+}
+
+button {
+  background-color: #9e89b8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin : 10px 0px;
+  text-transform: uppercase;
+}
+
+button:focus {
+  outline: none;
 }
 
 .column {
@@ -22,8 +38,6 @@ body {
   width: 25%;
   padding: 0 10px;
 }
-
-.row {margin: 0 -5px;}
 
 .row:after {
   content: "";
@@ -53,15 +67,34 @@ body {
   color: #b3afaf;
 }
 
-button {
-  background-color: #9e89b8;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 50px;
+/* Animation */
+.close:after{
+  content: "\00d7";
+  float: right;
+  font-size: 50px;
   cursor: pointer;
-  margin : 10px 0px;
-  text-transform: uppercase;
+}
+
+.card-animate {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card-animate-settings {
+  position: absolute;
+  width: 100%; 
+  transition: all .8s ease-out;
+  transition-timing-function: linear;
+  background: #fff;
+  bottom: 100%;
+}
+
+.card-animate-down {
+  transform: translateY(100%);
+}
+
+.card-animate-up {
+  transform: translateY(-100%);
 }
 
 /* Container */
@@ -91,11 +124,11 @@ button {
   margin: 10px;
 }
 
-
 /* Main Section */
 .main-content {
   background: #9e89b8 url(flight.jpg) no-repeat center / cover;
   background-blend-mode: luminosity;
+  min-height: calc(100vh - 40px);
 }
 
 .main-content div {
