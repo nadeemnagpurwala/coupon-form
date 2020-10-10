@@ -17,6 +17,53 @@ body {
   color: #333;
 }
 
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  padding: 16px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card small {
+  font-weight: bold;
+}
+
+.card .code {
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+.card .condition {
+  color: #b3afaf;
+}
+
+button {
+  background-color: #9e89b8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin : 10px 0px;
+  text-transform: uppercase;
+}
+
 /* Container */
 .wrapper {
   min-height: 100vh;
@@ -104,6 +151,12 @@ input[type=submit] {
   nav h2 {
     text-align: center;
     margin-bottom: 10px;
+  }
+
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
