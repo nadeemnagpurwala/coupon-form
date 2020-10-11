@@ -10,10 +10,9 @@
     <title>Coupon Form</title>
     <link rel="stylesheet" href="style.css">
     <link  rel="icon" type="image/x-icon" href="favicon.png" />
-    <script type="text/javascript" src="script.js"></script>
   </head>
 
-  <body onload="downAnimation()">
+  <body>
     <div class="wrapper">
       <header class="page-header">
         <nav>
@@ -69,48 +68,48 @@
       
       <div id="card-animation" class="row card-animate card-animate-settings">
         <div class="container">
-          <span onclick="upAnimation()" class="close"></span>
+          <span id="close-coupon" class="close"></span>
           <h1>More Deals For You !</h1>
           <h4>More discounts for your flight</h4>
         </div>
         <br>
-        <div class="column">
+        <div class="column coupon-column">
           <div class="card">
             <small>Flat</small>
             <h1>Rs. 500 off</h1>
             <p class="code">MMTFLAT500</p>
             <p class="condition">* Valid on Min 3 Tickets Booking</p>
-            <button>Copy Code</button>
+            <button class="copy-code">Copy Code</button>
           </div>
         </div>
   
-        <div class="column">
+        <div class="column coupon-column">
           <div class="card">
             <small>Flat</small>
             <h1>Rs. 300 off</h1>
             <p class="code">FLYMMT300</p>
             <p class="condition">* Valid on Min 2 Tickets Booking</p>
-            <button>Copy Code</button>
+            <button class="copy-code">Copy Code</button>
           </div>
         </div>
   
-        <div class="column">
+        <div class="column coupon-column">
           <div class="card">
             <small>Flat</small>
             <h1>Rs. 150 off</h1>
             <p class="code">FLYMMT150</p>
             <p class="condition">* Valid on Min 1 Tickets Booking</p>
-            <button>Copy Code</button>
+            <button class="copy-code">Copy Code</button>
           </div>
         </div>
 
-        <div class="column">
+        <div class="column coupon-column">
           <div class="card">
             <small>Upto</small>
             <h1>Rs. 2500 off</h1>
             <p class="code">MMTBEST</p>
             <br>
-            <button>Copy Code</button>
+            <button class="copy-code">Copy Code</button>
           </div>
         </div>
       </div>
@@ -119,5 +118,6 @@
         <small>&copy; Copyright 2020. All rights reserved.</small>
       </footer>
     </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

@@ -29,6 +29,11 @@ button {
   text-transform: uppercase;
 }
 
+.button-disabled {
+  background-color: #eee;
+  color: #333;
+}
+
 button:focus {
   outline: none;
 }
