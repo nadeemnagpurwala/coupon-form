@@ -26,8 +26,10 @@ for (let i = 0; i < coupons.length; i++) {
 	coupons[i].addEventListener("click", function() {
 		this.disabled = true;
 		this.classList.add("button-disabled");
+		this.innerText = "Code Copied";
 		var parentElement = this.parentElement;
 		var couponElement = parentElement.querySelector(".code").innerText;
+		document.getElementById('coupon').value = "Apply Code Here : "
 		copyCode(couponElement);
 		revertElementData(i);
 	});
@@ -58,6 +60,7 @@ function revertElementData(incrementVal) {
 			if (revertElement.classList.contains('button-disabled')) {
 				revertElement.classList.remove("button-disabled");
 				revertElement.disabled = false;
+				revertElement.innerText = "Copy Code";
 			}
 		}
 	}
